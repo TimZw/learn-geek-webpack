@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 内联 HTML 片段 -->
+    ${ require('raw-loader!./meta.html')}
+    <title>Document</title>
+    <!-- 内联 JS -->
+    <script>${ require('raw-loader!babel-loader!../../node_modules/lib-flexible/flexible.js') }</script>
+</head>
+<body>
+    <div id="root"><!--HTML_PLACEHOLDER--></div>
+
+    <!--INITIAL_DATA_PLACEHOLDER-->
+    <!-- <script src="https://cdn.bootcss.com/react/16.10.2/umd/react.production.min.js"></script>
+    <script src="https://cdn.bootcss.com/react-dom/16.10.2/umd/react-dom.production.min.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'FZZZHONGJW';
+    src: url('./font/FZZZHONGJW.ttf') format('truetype');
+}
+
+.search-text {
+    font-size: 20px;
+    color: red;
+    font-family: 'FZZZHONGJW';
+    display: flex;
+}

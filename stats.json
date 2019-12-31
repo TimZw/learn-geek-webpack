@@ -1,0 +1,385 @@
+ DONE  Compiled successfully in 15218ms15:07:37
+
+{
+  "errors": [],
+  "warnings": [],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react\\index.js",
+      "name": "./node_modules/react/index.js",
+      "index": 4,
+      "index2": 5,
+      "size": 189,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        3
+      ],
+      "issuer": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 1,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\common\\index.js",
+      "name": "./common/index.js",
+      "index": 2,
+      "index2": 1,
+      "size": 224,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\index\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/index/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\index\\index.js",
+          "name": "./src/index/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 2,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\object-assign\\index.js",
+      "name": "./node_modules/object-assign/index.js",
+      "index": 6,
+      "index2": 3,
+      "size": 2226,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react\\cjs\\react.production.min.js",
+      "issuerId": 4,
+      "issuerName": "./node_modules/react/cjs/react.production.min.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        },
+        {
+          "id": 0,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react\\index.js",
+          "name": "./node_modules/react/index.js"
+        },
+        {
+          "id": 4,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react\\cjs\\react.production.min.js",
+          "name": "./node_modules/react/cjs/react.production.min.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 3,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react-dom\\index.js",
+      "name": "./node_modules/react-dom/index.js",
+      "index": 7,
+      "index2": 9,
+      "size": 1352,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        3
+      ],
+      "issuer": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 4,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react\\cjs\\react.production.min.js",
+      "name": "./node_modules/react/cjs/react.production.min.js",
+      "index": 5,
+      "index2": 4,
+      "size": 9117,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        3
+      ],
+      "issuer": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react\\index.js",
+      "issuerId": 0,
+      "issuerName": "./node_modules/react/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        },
+        {
+          "id": 0,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react\\index.js",
+          "name": "./node_modules/react/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 5,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react-dom\\cjs\\react-dom.production.min.js",
+      "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+      "index": 8,
+      "index2": 8,
+      "size": 175351,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        3
+      ],
+      "issuer": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react-dom\\index.js",
+      "issuerId": 3,
+      "issuerName": "./node_modules/react-dom/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        },
+        {
+          "id": 3,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react-dom\\index.js",
+          "name": "./node_modules/react-dom/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 6,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\scheduler\\index.js",
+      "name": "./node_modules/scheduler/index.js",
+      "index": 9,
+      "index2": 7,
+      "size": 197,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react-dom\\cjs\\react-dom.production.min.js",
+      "issuerId": 5,
+      "issuerName": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        },
+        {
+          "id": 3,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react-dom\\index.js",
+          "name": "./node_modules/react-dom/index.js"
+        },
+        {
+          "id": 5,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react-dom\\cjs\\react-dom.production.min.js",
+          "name": "./node_modules/react-dom/cjs/react-dom.production.min.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 7,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\scheduler\\cjs\\scheduler.production.min.js",
+      "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
+      "index": 10,
+      "index2": 6,
+      "size": 7175,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\scheduler\\index.js",
+      "issuerId": 6,
+      "issuerName": "./node_modules/scheduler/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        },
+        {
+          "id": 3,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react-dom\\index.js",
+          "name": "./node_modules/react-dom/index.js"
+        },
+        {
+          "id": 5,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\react-dom\\cjs\\react-dom.production.min.js",
+          "name": "./node_modules/react-dom/cjs/react-dom.production.min.js"
+        },
+        {
+          "id": 6,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\scheduler\\index.js",
+          "name": "./node_modules/scheduler/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 8,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\css-loader\\dist\\cjs.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\sass-loader\\dist\\cjs.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\postcss-loader\\src\\index.js??ref--7-3!F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\px2rem-loader\\index.js??ref--7-4!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\search.scss",
+      "name": "./src/search/search.scss",
+      "index": 11,
+      "index2": 11,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 9,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js bd70f2c81d167a1d680835067cbd4969",
+      "name": "./src/search/index.js + 3 modules",
+      "index": 3,
+      "index2": 15,
+      "size": 11742,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 10,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\index\\index.js f03c164ed6c5c6abd79e775343a226e0",
+      "name": "./src/index/index.js + 1 modules",
+      "index": 0,
+      "index2": 2,
+      "size": 159,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": 11,
+      "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\text.js",
+      "name": "./src/search/text.js",
+      "index": 16,
+      "index2": 16,
+      "size": 144,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        4
+      ],
+      "issuer": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+      "issuerId": null,
+      "issuerName": "./src/search/index.js",
+      "issuerPath": [
+        {
+          "id": null,
+          "identifier": "F:\\WebLearnDocument\\webpack\\geek-webpack\\node_modules\\babel-loader\\lib\\index.js!F:\\WebLearnDocument\\webpack\\geek-webpack\\src\\search\\index.js",
+          "name": "./src/search/index.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "filteredModules": 1,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  }
+}
