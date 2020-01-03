@@ -2,6 +2,7 @@
 
 const glob = require('glob');
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -9,6 +10,15 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+
+const SpeedMeasureWebpackPlugin = require('speed-measure-webpack-plugin');//分析插件打包速度
+const { BundleAnalyzerPlugin  } = require('webpack-bundle-analyzer');//打包体积分析
+//多进程、缓存
+const HappyPack = require('happypack');//多进程打包
+const TerserPlugin = require('terser-webpack-plugin');//多进程并行压缩代码
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');//提升模块转换阶段的缓存
+
+const smp = new SpeedMeasureWebpackPlugin();
 
 //多页面（MPA打包）动态设置
 const setMPA = () => {
@@ -55,6 +65,7 @@ const setMPA = () => {
 
 const { entry, htmlWebpackPlugins } = setMPA();
 
+// module.exports = smp.wrap({
 module.exports = {
     // entry: './src/index.js',//打包入口 单入口
     // entry: { //多入口
@@ -73,8 +84,15 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: [
-                    'babel-loader',
+                    // {
+                    //     loader: 'thread-loader',//webpack多进程多实例
+                    //     options: {
+                    //         workers: 3//进程
+                    //     }
+                    // },
+                    // 'babel-loader',
                     // 'eslint-loader'
+                    'happypack/loader'
                 ]
             },
             {
@@ -191,6 +209,15 @@ module.exports = {
                 }
             })
         },
+        new webpack.DllReferencePlugin({//预编译分包 如react
+            manifest: require('./build/library/library.json')
+        }),
+        // new BundleAnalyzerPlugin(),
+        new HappyPack({
+            // 3) re-add the loaders you replaced above in #1:
+            loaders: ['babel-loader?cacheDirectory=true']//设置开启缓存
+        }),
+        new HardSourceWebpackPlugin(),
 /*         new HtmlWebpackExternalsPlugin({//分离公共引入包如react
             externals: [
                 {
@@ -205,23 +232,33 @@ module.exports = {
                 },
             ],
         }), */
-    ].concat(htmlWebpackPlugins).concat(new HTMLInlineCSSWebpackPlugin()),//css 内联
+    ]
+    .concat(htmlWebpackPlugins),
+    //TODO: HTMLInlineCSSWebpackPlugin与SpeedMeasureWebpackPlugin一起用会报错,目前没有解决方法
+    // .concat(new HTMLInlineCSSWebpackPlugin()),//css 内联
     optimization: {
         splitChunks: {
             minSize: 0,//文件超过多少才打包，//提出公共文件
             cacheGroups: {
-                vendor: { //提出引用文件
-                    test: /(react|react-dom)/,
-                    name: 'vendors',
-                    chunks: 'all'
-                },
+                // vendor: { //提出引用文件
+                //     test: /(react|react-dom)/,
+                //     name: 'vendors',
+                //     chunks: 'all'
+                // },
                 commons: {
                     name: 'commons',
                     chunks: 'all',
                     minChunks: 2,//至少引用次数
                 }
             }
-        }
+        },
+        minimizer: [
+            new TerserPlugin({
+                parallel: true,//并行
+                cache: true
+            }),
+        ],
     },
     stats: 'errors-only'
 };
+// });
