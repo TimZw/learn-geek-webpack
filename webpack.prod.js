@@ -1,9 +1,12 @@
 'use strict';
 
-const glob = require('glob');
+const glob = require('glob');//匹配规则，如路径
 const path = require('path');
 const webpack = require('webpack');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');//擦除无用css
+
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -17,8 +20,26 @@ const { BundleAnalyzerPlugin  } = require('webpack-bundle-analyzer');//打包体
 const HappyPack = require('happypack');//多进程打包
 const TerserPlugin = require('terser-webpack-plugin');//多进程并行压缩代码
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');//提升模块转换阶段的缓存
+//TODO: build don't finish
+// const threadLoader = require('thread-loader');
+
+/* threadLoader.warmup({
+    // pool options, like passed to loader options
+    // must match loader options to boot the correct pool
+    poolTimeout: 2000
+}, [
+    // modules to load
+    // can be any module, i. e.
+    'babel-loader',
+    // 'babel-preset-es2015',
+    // 'sass-loader',
+]); */
 
 const smp = new SpeedMeasureWebpackPlugin();
+
+const PATHS = {
+    src: path.join(__dirname, 'src')
+};
 
 //多页面（MPA打包）动态设置
 const setMPA = () => {
@@ -83,14 +104,15 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
+                include: path.resolve('src'),
                 use: [
-                    // {
-                    //     loader: 'thread-loader',//webpack多进程多实例
-                    //     options: {
-                    //         workers: 3//进程
-                    //     }
-                    // },
-                    // 'babel-loader',
+/*                     {
+                        loader: 'thread-loader',//webpack多进程多实例
+                        options: {
+                            workers: 3//进程
+                        }
+                    },
+                    'babel-loader', */
                     // 'eslint-loader'
                     'happypack/loader'
                 ]
@@ -218,6 +240,11 @@ module.exports = {
             loaders: ['babel-loader?cacheDirectory=true']//设置开启缓存
         }),
         new HardSourceWebpackPlugin(),
+        new PurgecssPlugin({
+            paths: glob.sync(`${PATHS.src}/**/*`, {
+                nodir: true
+            }),
+        }),
 /*         new HtmlWebpackExternalsPlugin({//分离公共引入包如react
             externals: [
                 {
@@ -258,6 +285,14 @@ module.exports = {
                 cache: true
             }),
         ],
+    },
+    resolve: {//缩短构建目标
+        alias: {
+            'react': path.resolve(__dirname, './node_modules/react/umd/react.production.min.js'),
+            'react-dom': path.resolve(__dirname, './node_modules/react-dom/umd/react-dom.production.min.js')
+        },
+        extensions: ['.js'],
+        mainFields: ['main']
     },
     stats: 'errors-only'
 };
